@@ -8,7 +8,7 @@ namespace GiftAidCalculator.TestConsole
 		static void Main(string[] args)
 		{
             ITaxCalculator taxCalc;
-            taxCalc = new TaxCalculator(new TaxRepository(), new SupplementRepository());
+            taxCalc = new TaxCalculator(new RepositoryFactory());
             // Calc Gift Aid Based on Previous
             Console.WriteLine("Please Enter donation amount:");
 			Console.WriteLine(taxCalc.GiftAidAmount(decimal.Parse(Console.ReadLine()),string.Empty));

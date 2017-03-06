@@ -10,10 +10,12 @@ namespace GiftAid.BAL
     {
         ITaxRepository taxRepo;
         ISupplementRepository suppRepo;
-        public TaxCalculator(ITaxRepository repo, ISupplementRepository supp)
+        IRepositoryFactory repoFactory;
+        public TaxCalculator(IRepositoryFactory repo)
         {
-            taxRepo = repo;
-            suppRepo = supp;
+           repoFactory = repo;
+            taxRepo = repo.GetTaxRepository();
+            suppRepo = repo.GetSupplementRepository();
         }
         public decimal GiftAidAmount(decimal donationAmount, string eventType)
         {

@@ -15,7 +15,7 @@ namespace GiftAidCalculator.Tests
         ITaxCalculator taxCalc;
         private void setup()
         {
-            taxCalc = new TaxCalculator(new TaxRepository(), new SupplementRepository());
+            taxCalc = new TaxCalculator(new RepositoryFactory());
         }
         [Test]
         public void story1_validate_default_rate()

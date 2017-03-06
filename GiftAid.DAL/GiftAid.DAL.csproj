@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISupplementRepository.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="SupplementRepository.cs" />
+    <Compile Include="RepositoryFactory.cs" />
     <Compile Include="TaxRepository.cs" />
     <Compile Include="ITaxRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
